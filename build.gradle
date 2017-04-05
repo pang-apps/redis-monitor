@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.5
+compileJava.options.encoding = 'UTF-8'
+
+eclipse {
+	classpath {
+		downloadSources = true
+		downloadJavadoc = true
+	}
+}
+
+configurations.all {
+	resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+	
+repositories {
+   mavenLocal()
+   mavenCentral()
+   maven{
+   	url "http://mini.prever.io:8081/nexus/content/groups/prever-io-public-repository/"
+   }
+}
+
+dependencies {
+	compile("redis.clients:jedis:2.6.3")
+	
+	compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2'
+	
+	compile group: 'com.pangdata', name: 'pang-sdk-java', version: '1.0.0-RELEASE'
+	
+	testCompile 'junit:junit:4.11'
+}
+
+version = '1.0.0-RELEASE'
+
+jar {
+    manifest.attributes provider: 'pangdata.com'
+}
+

@@ -88,24 +88,30 @@ public class ServerStateGetter implements Runnable {
 
         Set<Entry<String, List<String>>> entrySet = mItems.entrySet();
         Iterator<Entry<String, List<String>>> iterator = entrySet.iterator();
+        Map<String, String> allValues = new HashMap<String, String>();
+        
         while (iterator.hasNext()) {
           Entry<String, List<String>> next = iterator.next();
           List<String> value = next.getValue();
           if (value.size() == 0) {
             continue;
           }
-          String info = resource.info(next.getKey());
-          Map<String, String> values = parse(value, info);
-
-          pang.sendData(values);
-
-          logger.debug("Redis info\n{}", values);
+          
+          String section = next.getKey();
+          String result = resource.info(section);
+          Map<String, String> values = parse(value, result, section);
+          logger.debug("Redis info({})\n{}",next.getKey(), values);
+          allValues.putAll(values);
         }
+        
+        pang.sendData(allValues);
       } catch (Throwable e) {
         logger.error("Error occurred", e);
         if (e instanceof JedisConnectionException) {
           logger.error("Redis Server connection failure: {}", addr);
         }
+      } finally {
+        jedisPool.returnResourceObject(resource);
       }
 
       try {
@@ -119,12 +125,21 @@ public class ServerStateGetter implements Runnable {
     }
   }
 
-  private Map<String, String> parse(List<String> target, String info) {
-    String[] split = info.split("\r\n");
+  private Map<String, String> parse(List<String> target, String result, String section) {
+    String[] split = result.split("\r\n");
     Map<String, String> values = new HashMap<String, String>();
     for (int i = 0; i < split.length; i++) {
       String[] split2 = split[i].split(":");
-      if (target.contains(split2[0])) {
+      if(section.equalsIgnoreCase("keyspace") && split2.length >= 2) {
+        //prefix_dbindex_keys, prefix_dbindex_expires, prefix_dbindex_avg_ttl
+        String[] split3 = split2[1].split(",");
+        for(int j=0;j<split3.length;j++) {
+          String[] split4 = split3[j].split("=");
+          if(target.contains(split4[0])) {
+            values.put(prefix + "_" + split2[0]+"_"+split4[0], split4[1]);
+          }
+        }
+      } else if (target.contains(split2[0])) {
         values.put(prefix + "_" + split2[0], split2[1]);
       }
     }

@@ -21,6 +21,7 @@
 
 package com.pangdata.apps.redis;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -52,7 +53,7 @@ public class RedisServerMonitor {
     }
 
     loadTargetMonitoringItems();
-    logger.info("Monitoring items: ", mItems.toString());
+
     if (mItems.size() == 0) {
       logger.error("No item found to monitor. Check your pang.properties.");
       return;
@@ -90,11 +91,35 @@ public class RedisServerMonitor {
   }
 
   private static void loadTargetMonitoringItems() {
-    List<String> mainTarget = PangProperties.extractPrefixedProperties("monitor");
+    Map<String, Object> mainTarget = PangProperties.extractPrefixedProperties("monitor");
     logger.info("Monitoring sections: {}", mainTarget);
-    for (int i = 0; i < mainTarget.size(); i++) {
-      List<String> subTarget = PangProperties.extractPrefixedProperties(mainTarget.get(i));
-      mItems.put(mainTarget.get(i), subTarget);
+    
+    List<String> enabledSections = new ArrayList<String>();
+    
+    Iterator<Entry<String, Object>> iterator = mainTarget.entrySet().iterator();
+    while(iterator.hasNext()) {
+      Entry<String, Object> next = iterator.next();
+      String section = next.getKey();
+      if(String.valueOf(next.getValue()).equalsIgnoreCase("true")) {
+        enabledSections.add(section.substring(section.indexOf(".") + 1));
+      }
+    }
+    
+    logger.info("Enabled sections: {}", enabledSections);
+    
+    for (int i = 0; i < enabledSections.size(); i++) {
+      Map<String, Object> subTarget = PangProperties.extractPrefixedProperties(enabledSections.get(i));
+      List<String> items = new ArrayList<String> ();
+      Iterator<Entry<String, Object>> iterator2 = subTarget.entrySet().iterator();
+      while(iterator2.hasNext()) {
+        Entry<String, Object> next = iterator2.next();
+        String item = next.getKey();
+        if(String.valueOf(next.getValue()).equalsIgnoreCase("true")) {
+          items.add(item.substring(item.indexOf(".") + 1));
+        }
+      }
+      mItems.put(enabledSections.get(i), items);
+      logger.info("{} items: {}", enabledSections.get(i), items.toString());;
     }
   }
 }

@@ -22,7 +22,6 @@
 package com.pangdata.apps.redis;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -40,9 +39,10 @@ import com.pangdata.sdk.util.PangProperties;
 public class RedisServerMonitor {
   private static final Logger logger = LoggerFactory.getLogger(RedisServerMonitor.class);
 
-  private static Map<String, List<String>> mItems = new HashMap<String, List<String>>();
-
   private static AtomicBoolean running = new AtomicBoolean();
+
+  private static List<String> mItems;
+
 
   public static void main(String[] args) throws Exception {
     Map<Integer, Map<String, String>> redis = PangProperties.extractVariableProperties("redis");
@@ -52,9 +52,9 @@ public class RedisServerMonitor {
       return;
     }
 
-    loadTargetMonitoringItems();
+    mItems = loadTargetMonitoringItems();
 
-    if (mItems.size() == 0) {
+    if (mItems == null || mItems.size() == 0) {
       logger.error("No item found to monitor. Check your pang.properties.");
       return;
     }
@@ -86,11 +86,9 @@ public class RedisServerMonitor {
         executor.shutdown();
       }
     });
-    
-    
   }
 
-  private static void loadTargetMonitoringItems() {
+  private static List<String> loadTargetMonitoringItems() {
     Map<String, Object> mainTarget = PangProperties.extractPrefixedProperties("monitor");
     logger.info("Monitoring sections: {}", mainTarget);
     
@@ -105,21 +103,22 @@ public class RedisServerMonitor {
       }
     }
     
-    logger.info("Enabled sections: {}", enabledSections);
+    logger.info("Enabled items: {}", enabledSections);
+    return enabledSections;
     
-    for (int i = 0; i < enabledSections.size(); i++) {
-      Map<String, Object> subTarget = PangProperties.extractPrefixedProperties(enabledSections.get(i));
-      List<String> items = new ArrayList<String> ();
-      Iterator<Entry<String, Object>> iterator2 = subTarget.entrySet().iterator();
-      while(iterator2.hasNext()) {
-        Entry<String, Object> next = iterator2.next();
-        String item = next.getKey();
-        if(String.valueOf(next.getValue()).equalsIgnoreCase("true")) {
-          items.add(item.substring(item.indexOf(".") + 1));
-        }
-      }
-      mItems.put(enabledSections.get(i), items);
-      logger.info("{} items: {}", enabledSections.get(i), items.toString());;
-    }
+//    for (int i = 0; i < enabledSections.size(); i++) {
+//      Map<String, Object> subTarget = PangProperties.extractPrefixedProperties(enabledSections.get(i));
+//      List<String> items = new ArrayList<String> ();
+//      Iterator<Entry<String, Object>> iterator2 = subTarget.entrySet().iterator();
+//      while(iterator2.hasNext()) {
+//        Entry<String, Object> next = iterator2.next();
+//        String item = next.getKey();
+//        if(String.valueOf(next.getValue()).equalsIgnoreCase("true")) {
+//          items.add(item.substring(item.indexOf(".") + 1));
+//        }
+//      }
+//      mItems.put(enabledSections.get(i), items);
+//      logger.info("{} items: {}", enabledSections.get(i), items.toString());;
+//    }
   }
 }

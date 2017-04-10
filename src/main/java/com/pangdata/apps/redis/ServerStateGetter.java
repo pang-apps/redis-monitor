@@ -39,6 +39,7 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
 import redis.clients.util.Pool;
 
 import com.pangdata.sdk.mqtt.PangMqtt;
+import com.pangdata.sdk.util.NumberUtils;
 import com.pangdata.sdk.util.PangProperties;
 
 public class ServerStateGetter implements Runnable {
@@ -108,7 +109,7 @@ public class ServerStateGetter implements Runnable {
         resource = jedisPool.getResource();
 
         String result = resource.info();
-        Map<String, String> values = parse(mItems, result);
+        Map<String, Object> values = parse(mItems, result);
         logger.debug("Redis info: {}", values);
         pang.sendData(values);
       } catch (Throwable e) {
@@ -131,21 +132,21 @@ public class ServerStateGetter implements Runnable {
     }
   }
 
-  private Map<String, String> parse(List<String> mItems, String result) {
+  private Map<String, Object> parse(List<String> mItems, String result) {
     String[] split = result.split("\r\n");
-    Map<String, String> values = new HashMap<String, String>();
+    Map<String, Object> values = new HashMap<String, Object>();
     for (int i = 0; i < split.length; i++) {
       String[] split2 = split[i].split(":");
 
       if (mItems.contains(split2[0])) {
-        values.put(prefix + "_" + split2[0], split2[1]);
+        values.put(prefix + "_" + split2[0], NumberUtils.toObject(split2[1]));
       } else if (split2[0].startsWith("db") && split2.length >= 2) {
         // prefix_dbindex_keys, prefix_dbindex_expires, prefix_dbindex_avg_ttl
         String[] split3 = split2[1].split(",");
         for (int j = 0; j < split3.length; j++) {
           String[] split4 = split3[j].split("=");
           if (mItems.contains(split4[0])) {
-            values.put(prefix + "_" + split2[0] + "_" + split4[0], split4[1]);
+            values.put(prefix + "_" + split2[0] + "_" + split4[0], NumberUtils.toObject(split4[1]));
           }
         }
       }

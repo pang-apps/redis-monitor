@@ -14,8 +14,7 @@ redis-monitor.zip
 *.war
 *.ear
 
-
 /build
 /bin
 /logs
-/redis-monitor/logs
+/redis-monitor

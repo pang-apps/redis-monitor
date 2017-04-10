@@ -1,0 +1,1 @@
+java -cp ./libs/*;./conf com.pangdata.apps.redis.RedisServerMonitor

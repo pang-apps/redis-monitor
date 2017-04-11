@@ -48,15 +48,16 @@ redis.1.host = address:6379
 #redis.1.auth = password
 ``` 
 
-###### Step 2-2: If your Redis configured with Sentinel ######
+###### Step 2-3: If your Redis configured with Sentinel ######
 ```bash
 redis.1.prefix = my_redis1
 redis.1.host = ip:26379,ip:26380
 #redis.1.auth = password
 redis.1.master = mastername
 ``` 
+Note: You can add multiple Redis server using syntax 'redis.[index]'.
 
-###### Step 2-2: Define your monitoring item in Redis ######
+###### Step 2-4: Define your monitoring item in Redis ######
 ```
 ## Stats
 monitor.instantaneous_input_kbps = true
@@ -86,7 +87,7 @@ monitor.keys = true
 monitor.expires = false
 monitor.avg_ttl = false
 ```
-Please refer below url to define Redis's monitoring item that you want to monitor.
+Please refer redis.io's url to define Redis's monitoring items that you want to monitor.
 https://redis.io/commands/info
 
 ##### Step 3: Run #####

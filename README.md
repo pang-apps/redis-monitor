@@ -16,7 +16,7 @@ You can monitor your cloud infrstructure and applications using Pang SDK.
 ###### CPU Analytics ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-cpu.PNG" width="300" />
 
-###### CPU Analytics ######
+###### Memory Analytics ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-memory.PNG" width="300" />
 
 ###### Stats Analytics ######

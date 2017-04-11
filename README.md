@@ -58,6 +58,10 @@ Note: User key can be found in your profile of Pangdata.com
 redis.1.prefix = my_redis1
 redis.1.host = address:6379
 #redis.1.auth = password
+
+#redis.2.prefix = my_redis2
+#redis.2.host = address2:6379
+#redis.2.auth = password
 ``` 
 Note: You can add multiple Redis server using syntax 'redis.[index]'.
 

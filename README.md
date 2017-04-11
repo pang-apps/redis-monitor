@@ -7,10 +7,10 @@ You can monitor and access your database using pangdata.com cloud web service on
 
 ## Screen shot
 ###### Realtime monitoring ######
-![Realtime monitoring](https://github.com/pang-apps/redis-monitor/screen-shot/dashboard.PNG "Realtime monitoring")
+![Realtime monitoring](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG "Realtime monitoring")
 
 ###### Realtime monitoring on Mobile ######
-![Mobile](https://github.com/pang-apps/redis-monitor/screen-shot/dashboard-mobile.PNG "Realtime monitoring")
+![Mobile](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.PNG "Realtime monitoring")
 
 ## Getting Started
 #### Sign up for Pangdata.com ####

@@ -25,9 +25,8 @@ repositories {
 }
 
 dependencies {
-	compile("redis.clients:jedis:2.6.3")
-	
 	compile group: 'com.pangdata', name: 'pang-sdk-java', version: '1.0.0-RELEASE'
+	compile("redis.clients:jedis:2.6.3")
 	
 	testCompile 'junit:junit:4.11'
 }

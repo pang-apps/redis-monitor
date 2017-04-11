@@ -8,7 +8,7 @@ You can monitor your cloud infrstructure and applications using Pang SDK.
 ![Realtime monitoring](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG "Realtime monitoring")
 
 ###### Realtime monitoring on Mobile ######
-![Mobile](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.jpg "Realtime monitoring = 100px")
+![Mobile](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.jpg = 200x "Realtime monitoring")
 
 ## Getting Started
 #### Sign up for Pangdata.com ####

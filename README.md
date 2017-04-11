@@ -4,11 +4,23 @@ This application used Pangdata.com cloud service. Pangdata.com is cloud based mo
 You can monitor your cloud infrstructure and applications using Pang SDK.
 
 ## Screen shot
-###### Realtime monitoring ######
+###### Realtime monitoring dashboard ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG" width="600" />
 
 ###### Realtime monitoring on Mobile ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.jpg" width="300" />
+
+###### Device list ######
+<img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/devices.PNG" width="300" />
+
+###### CPU Analytics ######
+<img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-cpu.PNG" width="300" />
+
+###### CPU Analytics ######
+<img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-memory.PNG" width="300" />
+
+###### Stats Analytics ######
+<img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-stats.PNG" width="300" />
 
 ## Getting Started
 #### Sign up for Pangdata.com ####
@@ -41,12 +53,13 @@ pang.userkey=your user key in pangdata.com
 ``` 
 Note: User key can be found in your profile of Pangdata.com
 
-###### Step 2-2: Confgiure target Redis Server######
+###### Step 2-2: Confgiure target Redis Server ######
 ```bash
 redis.1.prefix = my_redis1
 redis.1.host = address:6379
 #redis.1.auth = password
 ``` 
+Note: You can add multiple Redis server using syntax 'redis.[index]'.
 
 ###### Step 2-3: If your Redis configured with Sentinel ######
 ```bash
@@ -55,7 +68,6 @@ redis.1.host = ip:26379,ip:26380
 #redis.1.auth = password
 redis.1.master = mastername
 ``` 
-Note: You can add multiple Redis server using syntax 'redis.[index]'.
 
 ###### Step 2-4: Define your monitoring item in Redis ######
 ```

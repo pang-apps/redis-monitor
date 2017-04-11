@@ -40,16 +40,53 @@ pang.username=your username in pangdata.com
 pang.userkey=your user key in pangdata.com
 ``` 
 
-Confgiure database connection properties
+Confgiure target Redis Server
 ```bash
-
-
+redis.1.prefix = my_redis1
+redis.1.host = address:6379
+#redis.1.auth = password
 ``` 
 
-Declare your status variable.
+If your Redis configured with Sentinel
 ```bash
-
+redis.1.prefix = my_redis1
+redis.1.host = ip:26379,ip:26380
+#redis.1.auth = password
+redis.1.master = mastername
 ``` 
+
+Define your monitoring item in Redis.
+```
+## Stats
+monitor.instantaneous_input_kbps = true
+monitor.instantaneous_output_kbps = true
+monitor.instantaneous_ops_per_sec = true
+monitor.total_connections_received = false
+monitor.total_commands_processed = false
+monitor.total_net_input_bytes = false
+monitor.rejected_connections = false
+
+## CPU
+monitor.used_cpu_sys = true
+monitor.used_cpu_user = true
+
+## Memory
+monitor.used_memory = true
+monitor.used_memory_rss = true
+monitor.used_memory_peak = true
+monitor.mem_fragmentation_ratio = false
+monitor.used_memory_lua = false
+
+## Client
+monitor.connected_clients = true
+
+## Keyspace
+monitor.keys = true
+monitor.expires = false
+monitor.avg_ttl = false
+```
+Please refer below url to define Redis's monitoring item that you want to monitor.
+https://redis.io/commands/info
 
 Note: User key can be found in your profile of Pangdata.com
 ##### Step 3: Run #####
@@ -58,13 +95,14 @@ Note: User key can be found in your profile of Pangdata.com
 redis-monitor/pang.bat
 ``` 
 ###### Linux ######
+Process will be launched in background.
 ``` 
 redis-monitor/pang.sh
 ``` 
-###### Background in Linux ######
-```
-nohup pang.sh > /dev/null 2>&1&
-```
+Check application's log
+``` 
+redis-monitor/log.sh
+``` 
 ##### Step 4: Access your devices #####
 Register your device in Pangdata.com
 

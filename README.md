@@ -8,7 +8,7 @@ You can monitor your cloud infrstructure and applications using Pang SDK.
 ![Realtime monitoring](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG "Realtime monitoring")
 
 ###### Realtime monitoring on Mobile ######
-![Mobile](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.jpg "Realtime monitoring")
+![Mobile](https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard-mobile.jpg "Realtime monitoring" "with=10px")
 
 ## Getting Started
 #### Sign up for Pangdata.com ####
@@ -39,6 +39,7 @@ Confgiure your account and user key in pang.properties.
 pang.username=your username in pangdata.com
 pang.userkey=your user key in pangdata.com
 ``` 
+Note: User key can be found in your profile of Pangdata.com
 
 Confgiure target Redis Server
 ```bash
@@ -88,7 +89,6 @@ monitor.avg_ttl = false
 Please refer below url to define Redis's monitoring item that you want to monitor.
 https://redis.io/commands/info
 
-Note: User key can be found in your profile of Pangdata.com
 ##### Step 3: Run #####
 ###### Windows ######
 ``` 

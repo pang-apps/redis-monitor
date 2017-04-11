@@ -34,21 +34,21 @@ tar -xvf redis-monitor.tar
 ##### Step 2: Configure pang.properties file #####
 cd redis-monitor/conf
 
-Confgiure your account and user key in pang.properties.
+###### Step 2-1: Confgiure your account and user key in pang.properties ######
 ```bash
 pang.username=your username in pangdata.com
 pang.userkey=your user key in pangdata.com
 ``` 
 Note: User key can be found in your profile of Pangdata.com
 
-Confgiure target Redis Server
+###### Step 2-2: Confgiure target Redis Server######
 ```bash
 redis.1.prefix = my_redis1
 redis.1.host = address:6379
 #redis.1.auth = password
 ``` 
 
-If your Redis configured with Sentinel
+###### Step 2-2: If your Redis configured with Sentinel ######
 ```bash
 redis.1.prefix = my_redis1
 redis.1.host = ip:26379,ip:26380
@@ -56,7 +56,7 @@ redis.1.host = ip:26379,ip:26380
 redis.1.master = mastername
 ``` 
 
-Define your monitoring item in Redis.
+###### Step 2-2: Define your monitoring item in Redis ######
 ```
 ## Stats
 monitor.instantaneous_input_kbps = true

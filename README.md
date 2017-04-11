@@ -129,3 +129,7 @@ Register the unregistered device.
 
 ##### Step 5: You are happy to play with your data #####
 Wow!! all done. Enjoy and play with your device and your data.
+
+##### Feel our demo #####
+Go to https://pangdata.com
+You can login using demo username 'pang-demo' with password 'panggood'.

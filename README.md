@@ -54,6 +54,7 @@ pang.userkey=your user key in pangdata.com
 Note: User key can be found in your profile of Pangdata.com
 
 ###### Step 2-2: Confgiure target Redis Server ######
+Note: prefix could not use space.
 ```bash
 redis.1.prefix = my_redis1
 redis.1.host = address:6379

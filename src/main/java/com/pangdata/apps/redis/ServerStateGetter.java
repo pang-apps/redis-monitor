@@ -76,7 +76,7 @@ public class ServerStateGetter implements Runnable {
         throw new IllegalArgumentException("'redis.[index].prefix' must not be null");
       }
   
-      prefix = prefix.trim();
+      prefix = prefix.trim().replaceAll("\\s+","");
       Thread.currentThread().setName(prefix);
   
       host = redis.get("host");

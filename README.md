@@ -7,7 +7,7 @@ Redis server's every information can be monitored and analzed with Pangdata.com
 
 # Pang Data Cloud based Monitoring Service
 This application used Pangdata.com cloud service. Pangdata.com is cloud based monitoring and analysis SaaS platform. 
-You can monitor your cloud infrstructure and applications using <a href="https://github.com/pang-apps/redis-monitor/releases/latest">Pang SDK
+You can monitor your cloud infrstructure and applications using <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK
 
 ## Screen shot
 ###### Realtime monitoring dashboard ######

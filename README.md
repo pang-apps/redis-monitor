@@ -1,3 +1,6 @@
+# Translations
+- [Korean](https://github.com/pangdata/pang-apps/redis-monitor/blob/master/README-i18n/README-kr.md)
+
 # Monitoring your Redis Server on mobile where ever you are.
 Redis Server monitoring application for performance and prediction of failure.
 This application used Pangdata.com cloud service. Pangdata.com is cloud based monitoring analysis SaaS platform. 

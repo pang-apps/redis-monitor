@@ -4,7 +4,7 @@
 # Monitoring your Redis Server on mobile where ever you are.
 Redis Server monitoring application for performance and prediction of failure.
 This application used Pangdata.com cloud service. Pangdata.com is cloud based monitoring analysis SaaS platform. 
-You can monitor your cloud infrstructure and applications using Pang SDK.
+You can monitor your cloud infrstructure and applications using <a href="https://github.com/pang-apps/redis-monitor/releases/latest">Pang SDK
 
 ## Screen shot
 ###### Realtime monitoring dashboard ######

@@ -46,8 +46,7 @@ wget https://github.com/pang-apps/redis-monitor/releases/download/[version]/redi
 tar -xvf redis-monitor.tar
 ``` 
 ##### Step 2: pang.properties 파일 설정하기 #####
-cd redis-monitor/conf
-pang.properties 파일을 노트 패드나 vi(Linux)로 수정합니다.
+redis-monitor/conf/pang.properties 파일을 노트패드나 vi(Linux)로 수정합니다.
 
 ###### Step 2-1: 사용자ID와 사용자 키를 설정합니다 ######
 ```bash

@@ -2,8 +2,9 @@
 성능생애주기 진단 및 예측 기능을 통해 미리 서버 장애를 예방하여 안정되고 최적화된 서비스를 운영할 수 있습니다.
 Redis 모니터링 앱은 팡데이터(Pangdata.com)를 사용하여 개발 되었습니다. 모든 저장, 분석, 모니터링 기술은 Pangdata 클라우드 서비스가 제공하며 팡 앱만 여러분의 서버에 설치하시면 됩니다.
 
+# 클라우드기반 모니터링, 분석 서비스 
 팡데이터는 SaaS(Software as a Service)로써 빠르고 편리하며 강력한 분석 기술을 통해 여러분이 인프라스트럭처(Infrastructure)를 가치있게 합니다.
-또한 Pang SDK를 사용하여 여러분이 원하는 인프라스트럭처(Infrastructure)를 모니터링 및 분석 할 수 있습니다.
+또한 Pang SDK<a href="https://github.com/pang-apps/redis-monitor/releases/latest">를 사용하여 여러분이 원하는 인프라스트럭처(Infrastructure)를 모니터링 및 분석 할 수 있습니다.
 
 ## 스크린 샷
 ###### 실시간 모니터링 대시보드 ######

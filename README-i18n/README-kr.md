@@ -78,7 +78,7 @@ redis.1.master = mastername
 ``` 
 
 ###### Step 2-4: Redis 모니터링 항목을 설정하세요 ######
-'monitor.' 접두어는 모니터링대상 항목 선언시 반드시 사용해야합니다.
+'monitor.' 접두어는 모니터링대상 항목 선언 시 반드시 사용해야 합니다.
 ```
 ## Stats
 monitor.instantaneous_input_kbps = true

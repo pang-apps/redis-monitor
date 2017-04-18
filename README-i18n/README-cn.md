@@ -26,12 +26,13 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
  **Java 1.5+** 版本或以上版本。
 #### 快速便捷的安装 ####
 安装只需5分钟^^.
+
 ##### 第1阶段 #####
 ###### Windows ######
 列表中是最新发布的<a href="http://pan.baidu.com/s/1dEE0YXz"> Redis服务器 监测App </a> 下载redis-monitor.zip文件，在要安装的路径上解压。
 ###### Linux ######
+http://pan.baidu.com/s/1dEE0YXz 下载redis-monitor.tar文件
 ``` 
-wget http://pan.baidu.com/s/1dEE0YXz 下载redis-monitor.tar文件
 tar -xvf redis-monitor.tar
 ``` 
 ##### 第2阶段: pang.properties 文件设置 #####
@@ -121,4 +122,4 @@ redis-monitor/log.sh
 一天，一周，一个月时间，通过统计分析，看一看大家的服务怎么茁壮成长。
  
 ##### 可以使用Demo感受一下吧 #####
-https://pangdata.com 用户名ID ： pang-demo  密码： panggood 来登录。
+https://pangdata.com 用户名ID ： pang-demo-cn  密码： panghao 来登录。

@@ -131,4 +131,4 @@ redis-monitor/log.sh
 ##### 可以使用Demo感受一下吧 #####
 https://pangdata.com 用户名ID ： pang-demo-cn  密码： panghao 来登录.
 
-现在可使用 Redis 服务器 仪表盘
+浏览 'Redis Server'仪表盘. 就可以看到实时监测的内容.

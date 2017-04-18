@@ -137,3 +137,5 @@ Pangdata.com 로그인후 디바이스 리스트에 등록된 모니터링 항�
 
 ##### 데모를 사용해 보세요 #####
 https://pangdata.com 접속하셔서 사용자 ID에  'pang-demo' 와 패스워드에  'panggood' 입력해서 로그인하십시오.
+
+'Redis Server'대시보드를사용해보세요.

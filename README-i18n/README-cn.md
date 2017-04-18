@@ -129,4 +129,6 @@ redis-monitor/log.sh
 一天，一周，一个月时间，通过统计分析，看一看大家的服务怎么茁壮成长
  
 ##### 可以使用Demo感受一下吧 #####
-https://pangdata.com 用户名ID ： pang-demo-cn  密码： panghao 来登录
+https://pangdata.com 用户名ID ： pang-demo-cn  密码： panghao 来登录.
+
+现在可使用 Redis 服务器 仪表盘

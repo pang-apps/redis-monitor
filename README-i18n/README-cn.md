@@ -1,10 +1,11 @@
 # 随时随地，可便捷的监测您的Redis服务器。通过各种分析功能，诊断服务器的性能周期。
 通过预测功能，预防服务器故障，可稳定运营状态。
-Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分析，监测技术都是Pangdata云服务所提供，把应用安装在大家的服务器上就可以了。
+Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分析，监测技术都是Pangdata云服务所提供，把应用安装在大家的服务器上就可以了
  
 # 云基础监测，分析服务。
-庞数据是 SaaS(Software as a Service)类型，所以快速便捷，强大的分析技术，让大家的基础设施（infrastructure）变得更有价值。
-又通过 <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK</a>的使用，可监测大家想要监测的基础设施（Infrastructure）。
+庞数据是 SaaS(Software as a Service)类型，所以快速便捷，强大的分析技术，让大家的基础设施(infrastructure)变得更有价值
+又通过 <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK</a>的使用，可监测大家想要监测的基础设施(Infrastructure)
+
 ## 屏幕截图
 ###### 实时监测仪表盘 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG" width="600" />
@@ -18,6 +19,7 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-memory.PNG" width="300" />
 ###### Stats 统计分析 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-stats.PNG" width="300" />
+
 ## 开始
 #### Pangdata.com 注册 ####
 安装Redis 监测应用程序之前要注册。通过邮箱即可加入.
@@ -29,7 +31,7 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
 
 ##### 第1阶段 #####
 ###### Windows ######
-列表中是最新发布的<a href="http://pan.baidu.com/s/1dEE0YXz"> Redis服务器 监测App </a> 下载redis-monitor.zip文件，在要安装的路径上解压。
+列表中是最新发布的<a href="http://pan.baidu.com/s/1dEE0YXz"> Redis服务器 监测App </a> 下载redis-monitor.zip文件, 在要安装的路径上解压
 ###### Linux ######
 http://pan.baidu.com/s/1dEE0YXz 下载redis-monitor.tar文件
 ``` 
@@ -37,7 +39,7 @@ tar -xvf redis-monitor.tar
 ``` 
 ##### 第2阶段: pang.properties 文件设置 #####
 
-redis-monitor/conf/pang.properties文件在Notepad++ vi(Linux)打开修改即可。
+redis-monitor/conf/pang.properties文件在Notepad++ vi(Linux)打开修改即可
  
 ######2-1: 用户ID和用户密钥设置 ######
 ```bash
@@ -68,7 +70,7 @@ redis.1.host = ip:26379,ip:26380
 redis.1.master = mastername
 ```
 ######  2-4: 设置 Redis监测项目 ######
-添加新Redis监测项目时，前缀必须写monitor. 
+添加新Redis监测项目时，前缀必须写monitor.
 ```
 ## Stats
 monitor.instantaneous_input_kbps = true
@@ -94,7 +96,7 @@ monitor.keys = true
 monitor.expires = false
 monitor.avg_ttl = false
 ```
-想找其他监测项目，那就访问 redis.io.确认即可。 以下是 按Section 监测的详细项目.
+想找其他监测项目，那就访问 redis.io.确认即可. 以下是 按Section 监测的详细项目.
 https://redis.io/commands/info
  
 #####  第3阶段: 运行 #####
@@ -108,7 +110,7 @@ redis-monitor/pang.bat
 ``` 
 redis-monitor/pang.sh
 ``` 
-检查应用程序log 。有配置问题驱动时会发生错误。一定要确认 log。
+检查应用程序log. 有配置问题驱动时会发生错误.一定要确认 log。
 ``` 
 redis-monitor/log.sh
 ```

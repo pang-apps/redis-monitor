@@ -121,6 +121,7 @@ redis-monitor/pang.bat
 redis-monitor/pang.sh
 ``` 
 레디스 팡앱 로그 확인. 설정 문제로 인해 구동 시 에러가 발생할 수 있습니다. 반드시 로그를 확인하세요.
+로그는 logs/pang.log 파일에 있습니다.
 ``` 
 redis-monitor/log.sh
 ``` 

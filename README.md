@@ -1,5 +1,6 @@
 # Translations
 - [Korean](https://github.com/pang-apps/redis-monitor/blob/master/README-i18n/README-kr.md)
+- [Chinese](https://github.com/pang-apps/redis-monitor/blob/master/README-i18n/README-cn.md)
 
 # Monitoring your Redis Server on mobile where ever you are.
 Redis Server monitoring application for performance and prediction of failure.

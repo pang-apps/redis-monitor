@@ -15,10 +15,13 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
 
 ###### 以注册的Redis监测项目表 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/devices.PNG" width="300" />
+
 ###### CPU 统计分析 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-cpu.PNG" width="300" />
+
 ###### Memory 统计分析 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-memory.PNG" width="300" />
+
 ###### Stats 统计分析 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/analytics-stats.PNG" width="300" />
 

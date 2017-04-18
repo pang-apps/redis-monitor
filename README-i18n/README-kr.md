@@ -39,7 +39,7 @@ Redis 팡앱 설치에 앞서 먼저 팡데이터에 가입해야 합니다. 이
 ##### 단계 1 #####
 
 ###### Windows ######
-최신 릴리즈 리스트에서 <a href="https://github.com/pang-apps/redis-monitor/releases/latest">Redis Server 모니터링 어플리케이션</a> 다운로드하여 설치하고자 하는 경로에 압축파일을 푸세요.
+최신 릴리즈 리스트에서 <a href="https://github.com/pang-apps/redis-monitor/releases/latest">Redis Server 모니터링 어플리케이션(redis-monitor.zip)</a> 다운로드하여 설치하고자 하는 경로에 압축파일을 푸세요.
 
 ###### Linux ######
 ``` 

@@ -6,6 +6,9 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
 庞数据是 SaaS(Software as a Service)类型，所以快速便捷，强大的分析技术，让大家的基础设施(infrastructure)变得更有价值
 又通过 <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK</a>的使用，可监测大家想要监测的基础设施(Infrastructure)
 
+###### 庞数据云监测服务 ######
+<img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/Cloud Monitoring Service.JPG" width="1000" />
+
 ## 屏幕截图
 ###### 实时监测仪表盘 ######
 <img src="https://github.com/pang-apps/redis-monitor/blob/master/screen-shot/dashboard.PNG" width="600" />

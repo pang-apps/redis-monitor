@@ -1,7 +1,14 @@
+# Translations
+- [Korean](https://github.com/pang-apps/redis-monitor/blob/master/README-i18n/README-kr.md)
+- [Chinese](https://github.com/pang-apps/redis-monitor/blob/master/README-i18n/README-cn.md)
+
 # Monitoring your Redis Server on mobile where ever you are.
 Redis Server monitoring application for performance and prediction of failure.
-This application used Pangdata.com cloud service. Pangdata.com is cloud based monitoring analysis SaaS platform. 
-You can monitor your cloud infrstructure and applications using Pang SDK.
+Redis server's every information can be monitored and analzed with Pangdata.com
+
+# Pang Data Cloud based Monitoring Service
+This application used Pangdata.com cloud service. Pangdata.com is cloud based monitoring and analysis SaaS platform. 
+You can monitor your cloud infrstructure and applications using <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK
 
 ## Screen shot
 ###### Realtime monitoring dashboard ######
@@ -134,3 +141,4 @@ Wow!! all done. Enjoy and play with your device and your data.
 ##### Feel our demo #####
 Go to https://pangdata.com
 You can login using demo username 'pang-demo' with password 'panggood'.
+See the dashboard 'Redis Server' and enjoy it.

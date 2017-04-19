@@ -2,7 +2,7 @@
 通过预测功能，预防服务器故障，可稳定运营状态.
 Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分析，监测技术都是Pangdata云服务所提供，把应用安装在大家的服务器上就可以了
  
-# 云基础监测，分析服务
+# 基于云监测，分析服务
 庞数据是 SaaS(Software as a Service)类型，所以快速便捷，强大的分析技术，让大家的基础设施(infrastructure)变得更有价值
 又通过 <a href="https://github.com/pangdata/pang-sdk-java">Pang SDK</a>的使用，可监测大家想要监测的基础设施(Infrastructure)
 

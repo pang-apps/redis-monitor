@@ -39,9 +39,9 @@ Redis 监测是使用(Pangdata.com)应用程序开发的。所有的存储，分
 
 ##### 第1阶段 #####
 ###### Windows ######
-列表中是最新发布的 http://pan.baidu.com/s/1dEE0YXz 下载redis-monitor.zip文件, 在要安装的路径上解压
+列表中是最新发布的 http://pan.baidu.com/s/1bpcRMUV 下载redis-monitor.zip文件, 在要安装的路径上解压
 ###### Linux ######
-列表中是最新发布的 http://pan.baidu.com/s/1dEE0YXz 下载redis-monitor.tar文件, 在要安装的路径上解压
+列表中是最新发布的 http://pan.baidu.com/s/1bpcRMUV 下载redis-monitor.tar文件, 在要安装的路径上解压
 ``` 
 tar -xvf redis-monitor.tar
 ``` 
